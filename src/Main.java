@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Notları giriniz: ");
         System.out.println("Matematik: ");
         int mat = sc.nextInt();
@@ -20,5 +21,7 @@ public class Main {
         System.out.println("Ortalama: ");
         double ortalama = (mat + fizik + kimya + türkce + tarih + muzik) / 6;
         System.out.println(ortalama);
+        String sonuc = (ortalama>60) ? "Sınıfı Geçti" : "Sınıfta Kaldı";
+        System.out.println(sonuc);
     }
 }
