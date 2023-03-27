@@ -3,23 +3,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Taksimetre Programı
+
         Scanner sc = new Scanner(System.in);
 
-        double a,b,c,u,Alan;
+        double perKm=2.20,km,total=10;
 
-        System.out.println("Enter a: ");
-        a = sc.nextDouble();
-        System.out.println("Enter b: ");
-        b = sc.nextDouble();
-        System.out.println("Enter c: ");
-        c = sc.nextDouble();
-
-        u = (a + b + c) / 2;
-
-        Alan = Math.sqrt(u*(u-a)*(u-b)*(u-c));
-        System.out.println(Alan);
+        System.out.println("KM giriniz: ");
+        km = sc.nextDouble();
+        total += km*perKm;
+        total = (total < 20) ? 20 : total;
+        System.out.println("Toplam tutar: "+ total);
 
 
+
+        //Dik Üçgende Hipotenüs Bulan Program
+
+//        Scanner sc = new Scanner(System.in);
+//
+//        double a,b,c,u,Alan;
+//
+//        System.out.println("Enter a: ");
+//        a = sc.nextDouble();
+//        System.out.println("Enter b: ");
+//        b = sc.nextDouble();
+//        System.out.println("Enter c: ");
+//        c = sc.nextDouble();
+//
+//        u = (a + b + c) / 2;
+//
+//        Alan = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+//        System.out.println(Alan);
 
 
 
@@ -40,6 +54,8 @@ public class Main {
 //        System.out.println("KDV'siz Fiyat= " + para);
 //        System.out.println("KDV'li Fiyat = " + kdvli);
 //        System.out.println("KDV Oranı = " + kdvOran);
+
+
 
         //NOT Hesaplayan Program
 
