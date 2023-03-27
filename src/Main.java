@@ -3,22 +3,43 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+
+        double a,b,c,u,Alan;
+
+        System.out.println("Enter a: ");
+        a = sc.nextDouble();
+        System.out.println("Enter b: ");
+        b = sc.nextDouble();
+        System.out.println("Enter c: ");
+        c = sc.nextDouble();
+
+        u = (a + b + c) / 2;
+
+        Alan = Math.sqrt(u*(u-a)*(u-b)*(u-c));
+        System.out.println(Alan);
+
+
+
+
+
+
         //KDV Tutarı Hesaplayan Program
 
-        Scanner sc = new Scanner(System.in);
-        double para, kdvOran, kdvli;
-        System.out.println("Para giriniz: ");
-        para = sc.nextInt();
-        if(para <= 1000 && para >= 0) {
-            kdvOran = 0.18;
-        }
-        else
-            kdvOran = 0.08;
-
-        kdvli = para + (para * kdvOran);
-        System.out.println("KDV'siz Fiyat= " + para);
-        System.out.println("KDV'li Fiyat = " + kdvli);
-        System.out.println("KDV Oranı = " + kdvOran);
+//        Scanner sc = new Scanner(System.in);
+//        double para, kdvOran, kdvli;
+//        System.out.println("Para giriniz: ");
+//        para = sc.nextInt();
+//        if(para <= 1000 && para >= 0) {
+//            kdvOran = 0.18;
+//        }
+//        else
+//            kdvOran = 0.08;
+//
+//        kdvli = para + (para * kdvOran);
+//        System.out.println("KDV'siz Fiyat= " + para);
+//        System.out.println("KDV'li Fiyat = " + kdvli);
+//        System.out.println("KDV Oranı = " + kdvOran);
 
         //NOT Hesaplayan Program
 
