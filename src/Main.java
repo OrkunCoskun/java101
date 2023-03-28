@@ -3,17 +3,38 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Dairenin Alanını ve Çevresini Bulan Program
+
+//        int r,a;
+//        double pi=3.14;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Yarı çapı giriniz: ");
+//        r = sc.nextInt();
+//        System.out.println("a değerini giriniz: ");
+//        a = sc.nextInt();
+//
+//        double alan = pi * r * r;
+//        double cevre = 2 * pi * r;
+//        double aAlan = (pi* (r*r) * a) / 360;
+//
+//        System.out.println("Alan: " + alan);
+//        System.out.println("Çevre: " + cevre);
+//        System.out.println("A Alan: " + aAlan);
+
+
         //Taksimetre Programı
 
-        Scanner sc = new Scanner(System.in);
-
-        double perKm=2.20,km,total=10;
-
-        System.out.println("KM giriniz: ");
-        km = sc.nextDouble();
-        total += km*perKm;
-        total = (total < 20) ? 20 : total;
-        System.out.println("Toplam tutar: "+ total);
+//        Scanner sc = new Scanner(System.in);
+//
+//        double perKm=2.20,km,total=10;
+//
+//        System.out.println("KM giriniz: ");
+//        km = sc.nextDouble();
+//        total += km*perKm;
+//        total = (total < 20) ? 20 : total;
+//        System.out.println("Toplam tutar: "+ total);
 
 
 
