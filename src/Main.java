@@ -3,6 +3,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Vücut Kitle İndeksi Hesaplayan Program
+
+        int kilo;
+        double boy;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Lütfen boyunuzu (metre cinsinde) giriniz: ");
+        boy = sc.nextDouble();
+
+        System.out.println("Lütfen kilonuzu giriniz: ");
+        kilo = sc.nextInt();
+
+        double bmi = kilo / (boy * boy);
+        System.out.println("Vücut Kitle İndeksiniz: " + bmi);
+
+
+
         //Dairenin Alanını ve Çevresini Bulan Program
 
 //        int r,a;
