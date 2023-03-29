@@ -3,21 +3,44 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Vücut Kitle İndeksi Hesaplayan Program
+        //Manav Kasa Programı
 
-        int kilo;
-        double boy;
+        double armutKG=2.14, elmaKG =3.67, domatesKG = 1.11, muzKG = 0.95, patlicanKG=5.00, toplam;
+        int armut,elma,domates,muz,patlican;
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Armut Kaç kilo? :");
+        armut = sc.nextInt();
+        System.out.println("Elma Kaç kilo? :");
+        elma = sc.nextInt();
+        System.out.println("Domates Kaç kilo? :");
+        domates = sc.nextInt();
+        System.out.println("Muz Kaç kilo? :");
+        muz = sc.nextInt();
+        System.out.println("Patlıcan Kaç kilo? :");
+        patlican = sc.nextInt();
 
-        System.out.println("Lütfen boyunuzu (metre cinsinde) giriniz: ");
-        boy = sc.nextDouble();
+        toplam = (armut * armutKG) + (elma * elmaKG) + (domates * domatesKG) + (muz * muzKG) + (patlican * patlicanKG);
 
-        System.out.println("Lütfen kilonuzu giriniz: ");
-        kilo = sc.nextInt();
+        System.out.println("Toplam Tutar: " + toplam);
 
-        double bmi = kilo / (boy * boy);
-        System.out.println("Vücut Kitle İndeksiniz: " + bmi);
+
+
+        //Vücut Kitle İndeksi Hesaplayan Program
+
+//        int kilo;
+//        double boy;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Lütfen boyunuzu (metre cinsinde) giriniz: ");
+//        boy = sc.nextDouble();
+//
+//        System.out.println("Lütfen kilonuzu giriniz: ");
+//        kilo = sc.nextInt();
+//
+//        double bmi = kilo / (boy * boy);
+//        System.out.println("Vücut Kitle İndeksiniz: " + bmi);
 
 
 
