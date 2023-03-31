@@ -5,36 +5,89 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Kullanıcı Girişi
+        //Sınıfı Geçme Durumu
 
-        String username, password,answer, newPassword;
+        int mat,fizik,turkce,kimya,muzik;
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Kullanıcı adınız: ");
-        username = sc.nextLine();
+        System.out.println("Notları giriniz: ");
+        System.out.println("Matematik: ");
+        mat = sc.nextInt();
+        System.out.println("Fizik: ");
+        fizik = sc.nextInt();
+        System.out.println("Türkçe: ");
+        turkce = sc.nextInt();
+        System.out.println("Kimya: ");
+        kimya = sc.nextInt();
+        System.out.println("Müzik: ");
+        muzik = sc.nextInt();
 
-        System.out.println("Şifreniz: ");
-        password = sc.nextLine();
 
-        if(username.equals("patika") && password.equals("java123")) {
-            System.out.println("Giriş Yaptınız!");
+        double ortalama = (mat + fizik + turkce + kimya + muzik) / 5;
+
+        if(!(mat >= 0 && mat <= 100)) {
+            ortalama = (fizik + turkce + kimya + muzik) / 4;
+        }
+        if(!(fizik >= 0 && fizik <= 100)) {
+            ortalama = (mat + turkce + kimya + muzik) / 4;
+        }
+        if(!(turkce >= 0 && turkce <= 100)) {
+            ortalama = (fizik + mat + kimya + muzik) / 4;
+        }
+        if(!(kimya >= 0 && kimya <= 100)) {
+            ortalama = (fizik + turkce + mat + muzik) / 4;
+        }
+        if(!(muzik >= 0 && muzik <= 100)) {
+            ortalama = (fizik + turkce + kimya + mat) / 4;
+        }
+
+
+        if(ortalama >= 55) {
+            System.out.println("Ortalama: " + ortalama);
+            System.out.println("Geçti!");
         }
         else {
-            System.out.println("Bilgileriniz Yanlış! Şifrenizi sıfırlamak istiyor musunuz?");
-            answer = sc.nextLine();
-            if(answer.equals("evet")) {
-                System.out.println("Yeni şifreyi giriniz: ");
-                newPassword = sc.nextLine();
-                if(newPassword.equals(password) || newPassword.equals("java123")) {
-                    System.out.println("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
-                }
-                else
-                    System.out.println("Şifre oluşturuldu!");
-            }
-            else
-                System.out.println("Sistemden çıkıldı");
+            System.out.println("Ortalama: " + ortalama);
+            System.out.println("Kaldı!");
         }
+
+
+
+
+
+        //Kullanıcı Girişi
+
+//        String username, password,answer, newPassword;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Kullanıcı adınız: ");
+//        username = sc.nextLine();
+//
+//        System.out.println("Şifreniz: ");
+//        password = sc.nextLine();
+//
+//        if(username.equals("patika") && password.equals("java123")) {
+//            System.out.println("Giriş Yaptınız!");
+//        }
+//        else {
+//            System.out.println("Bilgileriniz Yanlış! Şifrenizi sıfırlamak istiyor musunuz?");
+//            answer = sc.nextLine();
+//            if(answer.equals("evet")) {
+//                System.out.println("Yeni şifreyi giriniz: ");
+//                newPassword = sc.nextLine();
+//                if(newPassword.equals(password) || newPassword.equals("java123")) {
+//                    System.out.println("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
+//                }
+//                else
+//                    System.out.println("Şifre oluşturuldu!");
+//            }
+//            else
+//                System.out.println("Sistemden çıkıldı");
+//        }
+
+
 
 
 
