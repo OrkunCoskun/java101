@@ -5,40 +5,97 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int a,b,c;
+        //Burç Bulan Program
+
+        int month,day;
+        String burc = "";
+        boolean isError = false;
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Doğduğunuz ay: ");
+        month = sc.nextInt();
 
-        System.out.println("1. sayı: ");
-        a = sc.nextInt();
-        System.out.println("2. sayı: ");
-        b = sc.nextInt();
-        System.out.println("3. sayı: ");
-        c = sc.nextInt();
+        System.out.println("Doğduğunuz gün: ");
+        day = sc.nextInt();
 
-        //Sayıları Küçükten Büyüğe Sıralama
+        switch (month) {
+            case 1:
+                if (day >= 1 && day <= 31) {
+                    if (day < 22) {
+                        burc = "Oğlak";
+                    }
+                    else
+                        burc = "Kova";
+                }
+                else
+                    isError = true;
+                break;
+            case 2:
+                if (day >= 1 && day <= 28) {
+                    if (day < 20) {
+                        burc = "Kova";
+                    }
+                    else
+                        burc = "Balık";
+                }
+                else
+                    isError = true;
+                break;
+            case 3:
+                if (day >= 1 && day <= 31) {
+                    if (day < 21) {
+                        burc = "Balık";
+                    }
+                    else
+                        burc = "Koç";
+                }
+                else
+                    isError = true;
+                break;
+            default:
+                isError = true;
+        }
 
-        if (a < b && a < c) {
-            if (b < c) {
-                System.out.println("a < b < c");
-            }
-            else
-                System.out.println("a < c < b");
+        if (isError) {
+            System.out.println("Hatalı giriş yaptınız, tekrar deneyiniz.");
         }
-        else if (b < a && b < c) {
-            if (a < c) {
-                System.out.println("b < a < c");
-            }
-            else
-                System.out.println("b < c < a");
-        }
-        else if (c < b && c < a) {
-            if (a < b) {
-                System.out.println("c < a < b");
-            }
-            else
-                System.out.println("c < b < a");
-        }
+        else
+            System.out.println("Merhaba, burcunuz : " + burc);
+
+//        int a,b,c;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("1. sayı: ");
+//        a = sc.nextInt();
+//        System.out.println("2. sayı: ");
+//        b = sc.nextInt();
+//        System.out.println("3. sayı: ");
+//        c = sc.nextInt();
+//
+//        //Sayıları Küçükten Büyüğe Sıralama
+//
+//        if (a < b && a < c) {
+//            if (b < c) {
+//                System.out.println("a < b < c");
+//            }
+//            else
+//                System.out.println("a < c < b");
+//        }
+//        else if (b < a && b < c) {
+//            if (a < c) {
+//                System.out.println("b < a < c");
+//            }
+//            else
+//                System.out.println("b < c < a");
+//        }
+//        else if (c < b && c < a) {
+//            if (a < b) {
+//                System.out.println("c < a < b");
+//            }
+//            else
+//                System.out.println("c < b < a");
+//        }
 
         //Sayıları Büyükten Küçüğe Sıralama
 
