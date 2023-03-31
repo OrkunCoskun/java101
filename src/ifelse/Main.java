@@ -5,52 +5,74 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Sınıfı Geçme Durumu
-
-        int mat,fizik,turkce,kimya,muzik;
+        int heat;
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Sıcaklık Giriniz: ");
+        heat= sc.nextInt();
 
-        System.out.println("Notları giriniz: ");
-        System.out.println("Matematik: ");
-        mat = sc.nextInt();
-        System.out.println("Fizik: ");
-        fizik = sc.nextInt();
-        System.out.println("Türkçe: ");
-        turkce = sc.nextInt();
-        System.out.println("Kimya: ");
-        kimya = sc.nextInt();
-        System.out.println("Müzik: ");
-        muzik = sc.nextInt();
-
-
-        double ortalama = (mat + fizik + turkce + kimya + muzik) / 5;
-
-        if(!(mat >= 0 && mat <= 100)) {
-            ortalama = (fizik + turkce + kimya + muzik) / 4;
+        if (heat < 5) {
+            System.out.println("Kayak yapabilirsiniz.");
         }
-        if(!(fizik >= 0 && fizik <= 100)) {
-            ortalama = (mat + turkce + kimya + muzik) / 4;
+        else if (heat <= 25) {
+            if (heat <= 15) {
+                System.out.println("Sinemaya gidebilirsiniz.");
+            }
+            if (heat >= 10) {
+                System.out.println("Pikniğe gidebilirsiniz.");
+            }
         }
-        if(!(turkce >= 0 && turkce <= 100)) {
-            ortalama = (fizik + mat + kimya + muzik) / 4;
-        }
-        if(!(kimya >= 0 && kimya <= 100)) {
-            ortalama = (fizik + turkce + mat + muzik) / 4;
-        }
-        if(!(muzik >= 0 && muzik <= 100)) {
-            ortalama = (fizik + turkce + kimya + mat) / 4;
-        }
+        else
+            System.out.println("Yüzmeye gidebilirsiniz.");
 
 
-        if(ortalama >= 55) {
-            System.out.println("Ortalama: " + ortalama);
-            System.out.println("Geçti!");
-        }
-        else {
-            System.out.println("Ortalama: " + ortalama);
-            System.out.println("Kaldı!");
-        }
+
+        //Sınıfı Geçme Durumu
+
+//        int mat,fizik,turkce,kimya,muzik;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Notları giriniz: ");
+//        System.out.println("Matematik: ");
+//        mat = sc.nextInt();
+//        System.out.println("Fizik: ");
+//        fizik = sc.nextInt();
+//        System.out.println("Türkçe: ");
+//        turkce = sc.nextInt();
+//        System.out.println("Kimya: ");
+//        kimya = sc.nextInt();
+//        System.out.println("Müzik: ");
+//        muzik = sc.nextInt();
+//
+//
+//        double ortalama = (mat + fizik + turkce + kimya + muzik) / 5;
+//
+//        if(!(mat >= 0 && mat <= 100)) {
+//            ortalama = (fizik + turkce + kimya + muzik) / 4;
+//        }
+//        if(!(fizik >= 0 && fizik <= 100)) {
+//            ortalama = (mat + turkce + kimya + muzik) / 4;
+//        }
+//        if(!(turkce >= 0 && turkce <= 100)) {
+//            ortalama = (fizik + mat + kimya + muzik) / 4;
+//        }
+//        if(!(kimya >= 0 && kimya <= 100)) {
+//            ortalama = (fizik + turkce + mat + muzik) / 4;
+//        }
+//        if(!(muzik >= 0 && muzik <= 100)) {
+//            ortalama = (fizik + turkce + kimya + mat) / 4;
+//        }
+//
+//
+//        if(ortalama >= 55) {
+//            System.out.println("Ortalama: " + ortalama);
+//            System.out.println("Geçti!");
+//        }
+//        else {
+//            System.out.println("Ortalama: " + ortalama);
+//            System.out.println("Kaldı!");
+//        }
 
 
 
