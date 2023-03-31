@@ -7,6 +7,7 @@ public class Main {
 
         //Burç Bulan Program
 
+
         int month,day;
         String burc = "";
         boolean isError = false;
