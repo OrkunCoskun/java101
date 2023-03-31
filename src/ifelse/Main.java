@@ -5,25 +5,87 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int heat;
+        int a,b,c;
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Sıcaklık Giriniz: ");
-        heat= sc.nextInt();
 
-        if (heat < 5) {
-            System.out.println("Kayak yapabilirsiniz.");
-        }
-        else if (heat <= 25) {
-            if (heat <= 15) {
-                System.out.println("Sinemaya gidebilirsiniz.");
+        System.out.println("1. sayı: ");
+        a = sc.nextInt();
+        System.out.println("2. sayı: ");
+        b = sc.nextInt();
+        System.out.println("3. sayı: ");
+        c = sc.nextInt();
+
+        //Sayıları Küçükten Büyüğe Sıralama
+
+        if (a < b && a < c) {
+            if (b < c) {
+                System.out.println("a < b < c");
             }
-            if (heat >= 10) {
-                System.out.println("Pikniğe gidebilirsiniz.");
-            }
+            else
+                System.out.println("a < c < b");
         }
-        else
-            System.out.println("Yüzmeye gidebilirsiniz.");
+        else if (b < a && b < c) {
+            if (a < c) {
+                System.out.println("b < a < c");
+            }
+            else
+                System.out.println("b < c < a");
+        }
+        else if (c < b && c < a) {
+            if (a < b) {
+                System.out.println("c < a < b");
+            }
+            else
+                System.out.println("c < b < a");
+        }
+
+        //Sayıları Büyükten Küçüğe Sıralama
+
+//        if (a > b && a > c) {
+//            if (b > c) {
+//                System.out.println("a > b > c");
+//            }
+//            else
+//                System.out.println("a > c > b");
+//        }
+//        else if (b > a && b > c) {
+//            if (a > c) {
+//                System.out.println("b > a > c");
+//            }
+//            else
+//                System.out.println("b > c > a");
+//        }
+//        else if (c > b && c > a) {
+//            if (a > b) {
+//                System.out.println("c > a > b");
+//            }
+//            else
+//                System.out.println("c > b > a");
+//        }
+
+
+        //Hava Sıcaklığına Göre Etkinlik Önerme
+
+//        int heat;
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Sıcaklık Giriniz: ");
+//        heat= sc.nextInt();
+//
+//        if (heat < 5) {
+//            System.out.println("Kayak yapabilirsiniz.");
+//        }
+//        else if (heat <= 25) {
+//            if (heat <= 15) {
+//                System.out.println("Sinemaya gidebilirsiniz.");
+//            }
+//            if (heat >= 10) {
+//                System.out.println("Pikniğe gidebilirsiniz.");
+//            }
+//        }
+//        else
+//            System.out.println("Yüzmeye gidebilirsiniz.");
 
 
 
