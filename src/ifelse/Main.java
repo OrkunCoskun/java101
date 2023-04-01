@@ -5,64 +5,115 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Uçak Bileti Fiyatı Hesaplama
+        //Çin Zodyağı Hesaplama
 
-        int type,age,km;
-        double normalPrice,discountPrice,turnReturnPrice,perKm=0.10,totalPrice;
-        double percent50 = 0.50, percent10 = 0.10, percent30 = 0.30, percent20 = 0.20;
-        double ageDiscount50, ageDiscount10, ageDiscount30;
+        int birthday;
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Mesafeyi km türünden giriniz: ");
-        km = sc.nextInt();
-        System.out.println("Yaşınızı giriniz: ");
-        age = sc.nextInt();
-        System.out.println("Yolculuk tipinizi giriniz(1=> Tek Yön, 2=> Gidiş Dönüş): ");
-        type = sc.nextInt();
+        System.out.println("Doğum Yılınızı Giriniz: ");
+        birthday = sc.nextInt();
 
-        if (km <= 0 || age < 0 || (!(type <=2 && type >=1))) {
-            System.out.println("Hatalı veri girdiniz!");
-            return;
+        if (birthday % 12 == 0){
+            System.out.println("Çin Zodyağı Burcunuz: Maymun");
         }
+        else if (birthday % 12 == 1) {
+            System.out.println("Çin Zodyağı Burcunuz: Horoz");
+        }
+        else if (birthday % 12 == 2) {
+            System.out.println("Çin Zodyağı Burcunuz: Köpek");
+        }
+        else if (birthday % 12 == 3) {
+            System.out.println("Çin Zodyağı Burcunuz: Domuz");
+        }
+        else if (birthday % 12 == 4) {
+            System.out.println("Çin Zodyağı Burcunuz: Fare");
+        }
+        else if (birthday % 12 == 5) {
+            System.out.println("Çin Zodyağı Burcunuz: Öküz");
+        }
+        else if (birthday % 12 == 6) {
+            System.out.println("Çin Zodyağı Burcunuz: Kaplan");
+        }
+        else if (birthday % 12 == 7) {
+            System.out.println("Çin Zodyağı Burcunuz: Tavşan");
+        }
+        else if (birthday % 12 == 8) {
+            System.out.println("Çin Zodyağı Burcunuz: Ejderha");
+        }
+        else if (birthday % 12 == 9) {
+            System.out.println("Çin Zodyağı Burcunuz: Yılan");
+        }
+        else if (birthday % 12 == 10) {
+            System.out.println("Çin Zodyağı Burcunuz: At");
+        }
+        else if (birthday % 12 == 11) {
+            System.out.println("Çin Zodyağı Burcunuz: Koyun");
+        }
+        else
+            System.out.println("Hata");
 
-        normalPrice = km * perKm;
-        ageDiscount50 = normalPrice * percent50;
-        ageDiscount30 = normalPrice * percent30;
-        ageDiscount10 = normalPrice * percent10;
-        if(age < 12 && type == 2) {
-            discountPrice = normalPrice - ageDiscount50;
-            turnReturnPrice = discountPrice * percent20;
-            totalPrice = (discountPrice - turnReturnPrice) * 2;
-            System.out.println("Toplam Tutar: " + totalPrice);
-        }
-        else if(age < 12) {
-            discountPrice = normalPrice - ageDiscount50;
-            totalPrice = discountPrice;
-            System.out.println("Toplam Tutar: " + totalPrice);
-        }
-        if(age > 12 && age < 24 && type == 2) {
-            discountPrice = normalPrice - ageDiscount10;
-            turnReturnPrice = discountPrice * percent20;
-            totalPrice = (discountPrice - turnReturnPrice) * 2;
-            System.out.println("Toplam Tutar: " + totalPrice);
-        }
-        else if(age > 12 && age < 24) {
-            discountPrice = normalPrice - ageDiscount10;
-            totalPrice = discountPrice;
-            System.out.println("Toplam Tutar: " + totalPrice);
-        }
-        if(age > 65 && type == 2) {
-            discountPrice = normalPrice - ageDiscount30;
-            turnReturnPrice = discountPrice * percent20;
-            totalPrice = (discountPrice - turnReturnPrice) * 2;
-            System.out.println("Toplam Tutar: " + totalPrice);
-        }
-        else if (age > 65) {
-            discountPrice = normalPrice - ageDiscount30;
-            totalPrice = discountPrice;
-            System.out.println("Toplam Tutar: " + totalPrice);
-        }
+
+
+
+        //Uçak Bileti Fiyatı Hesaplama
+
+//        int type,age,km;
+//        double normalPrice,discountPrice,turnReturnPrice,perKm=0.10,totalPrice;
+//        double percent50 = 0.50, percent10 = 0.10, percent30 = 0.30, percent20 = 0.20;
+//        double ageDiscount50, ageDiscount10, ageDiscount30;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Mesafeyi km türünden giriniz: ");
+//        km = sc.nextInt();
+//        System.out.println("Yaşınızı giriniz: ");
+//        age = sc.nextInt();
+//        System.out.println("Yolculuk tipinizi giriniz(1=> Tek Yön, 2=> Gidiş Dönüş): ");
+//        type = sc.nextInt();
+//
+//        if (km <= 0 || age < 0 || (!(type <=2 && type >=1))) {
+//            System.out.println("Hatalı veri girdiniz!");
+//            return;
+//        }
+//
+//        normalPrice = km * perKm;
+//        ageDiscount50 = normalPrice * percent50;
+//        ageDiscount30 = normalPrice * percent30;
+//        ageDiscount10 = normalPrice * percent10;
+//        if(age < 12 && type == 2) {
+//            discountPrice = normalPrice - ageDiscount50;
+//            turnReturnPrice = discountPrice * percent20;
+//            totalPrice = (discountPrice - turnReturnPrice) * 2;
+//            System.out.println("Toplam Tutar: " + totalPrice);
+//        }
+//        else if(age < 12) {
+//            discountPrice = normalPrice - ageDiscount50;
+//            totalPrice = discountPrice;
+//            System.out.println("Toplam Tutar: " + totalPrice);
+//        }
+//        if(age > 12 && age < 24 && type == 2) {
+//            discountPrice = normalPrice - ageDiscount10;
+//            turnReturnPrice = discountPrice * percent20;
+//            totalPrice = (discountPrice - turnReturnPrice) * 2;
+//            System.out.println("Toplam Tutar: " + totalPrice);
+//        }
+//        else if(age > 12 && age < 24) {
+//            discountPrice = normalPrice - ageDiscount10;
+//            totalPrice = discountPrice;
+//            System.out.println("Toplam Tutar: " + totalPrice);
+//        }
+//        if(age > 65 && type == 2) {
+//            discountPrice = normalPrice - ageDiscount30;
+//            turnReturnPrice = discountPrice * percent20;
+//            totalPrice = (discountPrice - turnReturnPrice) * 2;
+//            System.out.println("Toplam Tutar: " + totalPrice);
+//        }
+//        else if (age > 65) {
+//            discountPrice = normalPrice - ageDiscount30;
+//            totalPrice = discountPrice;
+//            System.out.println("Toplam Tutar: " + totalPrice);
+//        }
 
 
 
