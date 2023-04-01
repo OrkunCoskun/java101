@@ -5,63 +5,125 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Uçak Bileti Fiyatı Hesaplama
+
+        int type,age,km;
+        double normalPrice,discountPrice,turnReturnPrice,perKm=0.10,totalPrice;
+        double percent50 = 0.50, percent10 = 0.10, percent30 = 0.30, percent20 = 0.20;
+        double ageDiscount50, ageDiscount10, ageDiscount30;
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Mesafeyi km türünden giriniz: ");
+        km = sc.nextInt();
+        System.out.println("Yaşınızı giriniz: ");
+        age = sc.nextInt();
+        System.out.println("Yolculuk tipinizi giriniz(1=> Tek Yön, 2=> Gidiş Dönüş): ");
+        type = sc.nextInt();
+
+        if (km <= 0 || age < 0 || (!(type <=2 && type >=1))) {
+            System.out.println("Hatalı veri girdiniz!");
+            return;
+        }
+
+        normalPrice = km * perKm;
+        ageDiscount50 = normalPrice * percent50;
+        ageDiscount30 = normalPrice * percent30;
+        ageDiscount10 = normalPrice * percent10;
+        if(age < 12 && type == 2) {
+            discountPrice = normalPrice - ageDiscount50;
+            turnReturnPrice = discountPrice * percent20;
+            totalPrice = (discountPrice - turnReturnPrice) * 2;
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+        else if(age < 12) {
+            discountPrice = normalPrice - ageDiscount50;
+            totalPrice = discountPrice;
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+        if(age > 12 && age < 24 && type == 2) {
+            discountPrice = normalPrice - ageDiscount10;
+            turnReturnPrice = discountPrice * percent20;
+            totalPrice = (discountPrice - turnReturnPrice) * 2;
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+        else if(age > 12 && age < 24) {
+            discountPrice = normalPrice - ageDiscount10;
+            totalPrice = discountPrice;
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+        if(age > 65 && type == 2) {
+            discountPrice = normalPrice - ageDiscount30;
+            turnReturnPrice = discountPrice * percent20;
+            totalPrice = (discountPrice - turnReturnPrice) * 2;
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+        else if (age > 65) {
+            discountPrice = normalPrice - ageDiscount30;
+            totalPrice = discountPrice;
+            System.out.println("Toplam Tutar: " + totalPrice);
+        }
+
+
+
+
         //Burç Bulan Program
 
 
-        int month,day;
-        String burc = "";
-        boolean isError = false;
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Doğduğunuz ay: ");
-        month = sc.nextInt();
-
-        System.out.println("Doğduğunuz gün: ");
-        day = sc.nextInt();
-
-        switch (month) {
-            case 1:
-                if (day >= 1 && day <= 31) {
-                    if (day < 22) {
-                        burc = "Oğlak";
-                    }
-                    else
-                        burc = "Kova";
-                }
-                else
-                    isError = true;
-                break;
-            case 2:
-                if (day >= 1 && day <= 28) {
-                    if (day < 20) {
-                        burc = "Kova";
-                    }
-                    else
-                        burc = "Balık";
-                }
-                else
-                    isError = true;
-                break;
-            case 3:
-                if (day >= 1 && day <= 31) {
-                    if (day < 21) {
-                        burc = "Balık";
-                    }
-                    else
-                        burc = "Koç";
-                }
-                else
-                    isError = true;
-                break;
-            default:
-                isError = true;
-        }
-
-        if (isError) {
-            System.out.println("Hatalı giriş yaptınız, tekrar deneyiniz.");
-        }
-        else
-            System.out.println("Merhaba, burcunuz : " + burc);
+//        int month,day;
+//        String burc = "";
+//        boolean isError = false;
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Doğduğunuz ay: ");
+//        month = sc.nextInt();
+//
+//        System.out.println("Doğduğunuz gün: ");
+//        day = sc.nextInt();
+//
+//        switch (month) {
+//            case 1:
+//                if (day >= 1 && day <= 31) {
+//                    if (day < 22) {
+//                        burc = "Oğlak";
+//                    }
+//                    else
+//                        burc = "Kova";
+//                }
+//                else
+//                    isError = true;
+//                break;
+//            case 2:
+//                if (day >= 1 && day <= 28) {
+//                    if (day < 20) {
+//                        burc = "Kova";
+//                    }
+//                    else
+//                        burc = "Balık";
+//                }
+//                else
+//                    isError = true;
+//                break;
+//            case 3:
+//                if (day >= 1 && day <= 31) {
+//                    if (day < 21) {
+//                        burc = "Balık";
+//                    }
+//                    else
+//                        burc = "Koç";
+//                }
+//                else
+//                    isError = true;
+//                break;
+//            default:
+//                isError = true;
+//        }
+//
+//        if (isError) {
+//            System.out.println("Hatalı giriş yaptınız, tekrar deneyiniz.");
+//        }
+//        else
+//            System.out.println("Merhaba, burcunuz : " + burc);
 
 //        int a,b,c;
 //
