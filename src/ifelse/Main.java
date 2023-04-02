@@ -5,53 +5,83 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Çin Zodyağı Hesaplama
+        //Artık YIl Hesaplama
 
-        int birthday;
+        int year;
+        boolean artik = false;
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Yıl Giriniz: ");
+        year = sc.nextInt();
 
-        System.out.println("Doğum Yılınızı Giriniz: ");
-        birthday = sc.nextInt();
-
-        if (birthday % 12 == 0){
-            System.out.println("Çin Zodyağı Burcunuz: Maymun");
-        }
-        else if (birthday % 12 == 1) {
-            System.out.println("Çin Zodyağı Burcunuz: Horoz");
-        }
-        else if (birthday % 12 == 2) {
-            System.out.println("Çin Zodyağı Burcunuz: Köpek");
-        }
-        else if (birthday % 12 == 3) {
-            System.out.println("Çin Zodyağı Burcunuz: Domuz");
-        }
-        else if (birthday % 12 == 4) {
-            System.out.println("Çin Zodyağı Burcunuz: Fare");
-        }
-        else if (birthday % 12 == 5) {
-            System.out.println("Çin Zodyağı Burcunuz: Öküz");
-        }
-        else if (birthday % 12 == 6) {
-            System.out.println("Çin Zodyağı Burcunuz: Kaplan");
-        }
-        else if (birthday % 12 == 7) {
-            System.out.println("Çin Zodyağı Burcunuz: Tavşan");
-        }
-        else if (birthday % 12 == 8) {
-            System.out.println("Çin Zodyağı Burcunuz: Ejderha");
-        }
-        else if (birthday % 12 == 9) {
-            System.out.println("Çin Zodyağı Burcunuz: Yılan");
-        }
-        else if (birthday % 12 == 10) {
-            System.out.println("Çin Zodyağı Burcunuz: At");
-        }
-        else if (birthday % 12 == 11) {
-            System.out.println("Çin Zodyağı Burcunuz: Koyun");
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    artik = true;
+                }
+                else
+                    artik = false;
+            }
+            else
+                artik = true;
         }
         else
-            System.out.println("Hata");
+            artik = true;
+
+        if (artik) {
+            System.out.println(year + " bir artık yıldır!");
+        }
+        else
+            System.out.println(year + " bir artık yıl değildir!");
+
+
+        //Çin Zodyağı Hesaplama
+
+//        int birthday;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Doğum Yılınızı Giriniz: ");
+//        birthday = sc.nextInt();
+//
+//        if (birthday % 12 == 0){
+//            System.out.println("Çin Zodyağı Burcunuz: Maymun");
+//        }
+//        else if (birthday % 12 == 1) {
+//            System.out.println("Çin Zodyağı Burcunuz: Horoz");
+//        }
+//        else if (birthday % 12 == 2) {
+//            System.out.println("Çin Zodyağı Burcunuz: Köpek");
+//        }
+//        else if (birthday % 12 == 3) {
+//            System.out.println("Çin Zodyağı Burcunuz: Domuz");
+//        }
+//        else if (birthday % 12 == 4) {
+//            System.out.println("Çin Zodyağı Burcunuz: Fare");
+//        }
+//        else if (birthday % 12 == 5) {
+//            System.out.println("Çin Zodyağı Burcunuz: Öküz");
+//        }
+//        else if (birthday % 12 == 6) {
+//            System.out.println("Çin Zodyağı Burcunuz: Kaplan");
+//        }
+//        else if (birthday % 12 == 7) {
+//            System.out.println("Çin Zodyağı Burcunuz: Tavşan");
+//        }
+//        else if (birthday % 12 == 8) {
+//            System.out.println("Çin Zodyağı Burcunuz: Ejderha");
+//        }
+//        else if (birthday % 12 == 9) {
+//            System.out.println("Çin Zodyağı Burcunuz: Yılan");
+//        }
+//        else if (birthday % 12 == 10) {
+//            System.out.println("Çin Zodyağı Burcunuz: At");
+//        }
+//        else if (birthday % 12 == 11) {
+//            System.out.println("Çin Zodyağı Burcunuz: Koyun");
+//        }
+//        else
+//            System.out.println("Hata");
 
 
 
