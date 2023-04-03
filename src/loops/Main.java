@@ -5,23 +5,51 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Çift ve 4'ün Katları Olan Sayıların Toplamını Bulan Program
+
+        int n,sum=0;
+        Scanner sc = new Scanner(System.in);
+        do {
+            System.out.print("Sayı Giriniz: ");
+            n = sc.nextInt();
+            if(n % 2 == 0 && n % 4 == 0) {
+                sum += n;
+            }
+        }while (!(n % 2 == 1));
+        System.out.println("Toplam: " + sum);
+
+        //Tek Sayıların Toplamını Bulan Program
+
+//        int n,sum=0;
+//        Scanner sc = new Scanner(System.in);
+//        do {
+//            System.out.println("Sayı Giriniz: ");
+//            n = sc.nextInt();
+//            if(n % 2 == 1) {
+//                sum += n;
+//            }
+//        }while (n > 0);
+//        System.out.println("Toplam: " + sum);
+
+
+
         //Girilen Sayıya Kadar Olan 3 ve 4'e Tam Bölünen Sayıların Ortalamasını Hesaplayan Program
 
-        int k,sum=0,count=0;
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("Sayı Giriniz: ");
-        k = sc.nextInt();
-
-        for (int i = 0; i <= k; i++) {
-            if ((i % 3 == 0) && (i % 4 ==0)) {
-                sum += i;
-                count++;
-            }
-        }
-        double average = (double) sum / count;
-        System.out.println("Ortalama: " + average);
+//        int k,sum=0,count=0;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Sayı Giriniz: ");
+//        k = sc.nextInt();
+//
+//        for (int i = 0; i <= k; i++) {
+//            if ((i % 3 == 0) && (i % 4 ==0)) {
+//                sum += i;
+//                count++;
+//            }
+//        }
+//        double average = (double) sum / count;
+//        System.out.println("Ortalama: " + average);
 
 
 
