@@ -5,22 +5,54 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Kombinasyon Hesaplayan Program
+        int count = 0, n, r;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("n Giriniz:");
+        n = sc.nextInt();
+        System.out.println("r Giriniz:");
+        r = sc.nextInt();
+
+
+        for (int number1 = 1; number1 < n; number1++) {
+            for (int number2 = number1 + 1; number2 <= r; number2++) {
+                System.out.println(number1 + " " + number2);
+                count++; // Increment count
+            }
+        }
+        System.out.println("Toplam kombinasyon: " + count);
+
+        //Faktöriyel Hesaplayan Program
+
+//        int n;
+//        int total = 1;
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Sayı Giriniz:");
+//        n = sc.nextInt();
+//
+//        for (int i = 1; i<= n; i++) {
+//            total *= i;
+//        }
+//        System.out.println(n + ". Faktöriyel: " + total);
+
+
+
         //Girilen Sayıdan Küçük 4 ve 5'in Kuvvetlerini Bulan Program
 
-        int n;
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Sayı Giriniz:");
-        n = sc.nextInt();
-
-        System.out.println("4'ün Kuvvetleri");
-        for (int i = 1; i<=n; i*=4) {
-            System.out.println(i);
-        }
-        System.out.println("5'in Kuvvetleri");
-        for (int i = 1; i<=n; i*=5) {
-            System.out.println(i);
-        }
+//        int n;
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Sayı Giriniz:");
+//        n = sc.nextInt();
+//
+//        System.out.println("4'ün Kuvvetleri");
+//        for (int i = 1; i<=n; i*=4) {
+//            System.out.println(i);
+//        }
+//        System.out.println("5'in Kuvvetleri");
+//        for (int i = 1; i<=n; i*=5) {
+//            System.out.println(i);
+//        }
 
         //Girilen Sayıdan Küçük 2’nin Kuvvetlerini Bulan Program
 
