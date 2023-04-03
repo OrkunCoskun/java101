@@ -5,22 +5,55 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Kombinasyon Hesaplayan Program
-        int count = 0, n, r;
+
+        //Üslü Sayı Hesaplayan Program
+
+        //with for loop
+        int n,k, total=1;
+
         Scanner sc = new Scanner(System.in);
-        System.out.println("n Giriniz:");
+
+        System.out.print("Üssü alınacak sayı: ");
         n = sc.nextInt();
-        System.out.println("r Giriniz:");
-        r = sc.nextInt();
-
-
-        for (int number1 = 1; number1 < n; number1++) {
-            for (int number2 = number1 + 1; number2 <= r; number2++) {
-                System.out.println(number1 + " " + number2);
-                count++; // Increment count
-            }
+        System.out.print("Üs olacak sayı: ");
+        k = sc.nextInt();
+        for (int i = 1; i <= k; i++) {
+            total *= n;
         }
-        System.out.println("Toplam kombinasyon: " + count);
+        System.out.println("Cevap: " + total);
+
+        //with while loop
+//        int n,k, total=1, i=1;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Üssü alınacak sayı: ");
+//        n = sc.nextInt();
+//        System.out.print("Üs olacak sayı: ");
+//        k = sc.nextInt();
+//        while (i <= k) {
+//            total *= n;
+//            i++;
+//        }
+//        System.out.println("Cevap: " + total);
+
+        //Kombinasyon Hesaplayan Program
+
+//        int count = 0, n, r;
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("n Giriniz:");
+//        n = sc.nextInt();
+//        System.out.println("r Giriniz:");
+//        r = sc.nextInt();
+//
+//
+//        for (int number1 = 1; number1 < n; number1++) {
+//            for (int number2 = number1 + 1; number2 <= r; number2++) {
+//                System.out.println(number1 + " " + number2);
+//                count++; // Increment count
+//            }
+//        }
+//        System.out.println("Toplam kombinasyon: " + count);
 
         //Faktöriyel Hesaplayan Program
 
