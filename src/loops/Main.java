@@ -5,18 +5,47 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Girilen Sayıdan Küçük 4 ve 5'in Kuvvetlerini Bulan Program
+
+        int n;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Sayı Giriniz:");
+        n = sc.nextInt();
+
+        System.out.println("4'ün Kuvvetleri");
+        for (int i = 1; i<=n; i*=4) {
+            System.out.println(i);
+        }
+        System.out.println("5'in Kuvvetleri");
+        for (int i = 1; i<=n; i*=5) {
+            System.out.println(i);
+        }
+
+        //Girilen Sayıdan Küçük 2’nin Kuvvetlerini Bulan Program
+
+//        int n;
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Sayı Giriniz:");
+//        n = sc.nextInt();
+//
+//        for (int i = 1; i<=n; i*=2) {
+//            System.out.println(i);
+//        }
+
         //Çift ve 4'ün Katları Olan Sayıların Toplamını Bulan Program
 
-        int n,sum=0;
-        Scanner sc = new Scanner(System.in);
-        do {
-            System.out.print("Sayı Giriniz: ");
-            n = sc.nextInt();
-            if(n % 2 == 0 && n % 4 == 0) {
-                sum += n;
-            }
-        }while (!(n % 2 == 1));
-        System.out.println("Toplam: " + sum);
+//        int n,sum=0;
+//        Scanner sc = new Scanner(System.in);
+//        do {
+//            System.out.print("Sayı Giriniz: ");
+//            n = sc.nextInt();
+//            if(n % 2 == 0 && n % 4 == 0) {
+//                sum += n;
+//            }
+//        }while (!(n % 2 == 1));
+//        System.out.println("Toplam: " + sum);
 
         //Tek Sayıların Toplamını Bulan Program
 
