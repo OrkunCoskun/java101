@@ -5,34 +5,61 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Girilen Sayıya Kadar Olan Çift Sayıları Bulan Program
+
+//        int k;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Sayı Giriniz: ");
+//        k = sc.nextInt();
+
+        //with while loop
+//        int j=1;
+//        while(j <=k) {
+//            j++;
+//            if (j % 2 == 0) {
+//                System.out.println(j + " çift sayıdır");
+//            }
+//        }
+
+        //with for loop
+//        for (int i = 1; i <= k; i++) {
+//            if (i % 2 == 0) {
+//                System.out.println(i + " çift sayıdır");
+//            }
+//        }
+
+
+
         //Artık YIl Hesaplama
 
-        int year;
-        boolean artik = false;
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Yıl Giriniz: ");
-        year = sc.nextInt();
-
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    artik = true;
-                }
-                else
-                    artik = false;
-            }
-            else
-                artik = true;
-        }
-        else
-            artik = true;
-
-        if (artik) {
-            System.out.println(year + " bir artık yıldır!");
-        }
-        else
-            System.out.println(year + " bir artık yıl değildir!");
+//        int year;
+//        boolean artik = false;
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Yıl Giriniz: ");
+//        year = sc.nextInt();
+//
+//        if (year % 4 == 0) {
+//            if (year % 100 == 0) {
+//                if (year % 400 == 0) {
+//                    artik = true;
+//                }
+//                else
+//                    artik = false;
+//            }
+//            else
+//                artik = true;
+//        }
+//        else
+//            artik = true;
+//
+//        if (artik) {
+//            System.out.println(year + " bir artık yıldır!");
+//        }
+//        else
+//            System.out.println(year + " bir artık yıl değildir!");
 
 
         //Çin Zodyağı Hesaplama
