@@ -5,23 +5,40 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Bir Sayının Basamak Sayılarının Toplamını Hesaplayan Program
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Sayı Giriniz: ");
-        int number = sc.nextInt();
-        int value;
-        int result = 0;
+        //Harmonik Sayıları Bulan Program
 
-        while (number != 0) {
-            //2451
-            //1
-            value = number % 10;
-            //result = 0 + 1 = 1;
-            result += value;
-            //245
-            number /= 10;
+        Scanner sc = new Scanner(System.in);
+        System.out.print("N sayısını giriniz: ");
+        int n = sc.nextInt();
+        double result = 0;
+
+        for (double i = 1; i <= n; i++) {
+            result += (1/i);
         }
         System.out.println(result);
+
+
+
+
+
+        //Bir Sayının Basamak Sayılarının Toplamını Hesaplayan Program
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Sayı Giriniz: ");
+//        int number = sc.nextInt();
+//        int value;
+//        int result = 0;
+//
+//        while (number != 0) {
+//            //2451
+//            //1
+//            value = number % 10;
+//            //result = 0 + 1 = 1;
+//            result += value;
+//            //245
+//            number /= 10;
+//        }
+//        System.out.println(result);
 
 
         //Armstrong Sayıları Bulan Program
