@@ -5,22 +5,109 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Bir Sayının Basamak Sayılarının Toplamını Hesaplayan Program
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Sayı Giriniz: ");
+        int number = sc.nextInt();
+        int value;
+        int result = 0;
+
+        while (number != 0) {
+            //2451
+            //1
+            value = number % 10;
+            //result = 0 + 1 = 1;
+            result += value;
+            //245
+            number /= 10;
+        }
+        System.out.println(result);
+
+
+        //Armstrong Sayıları Bulan Program
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Sayı Giriniz: ");
+//        int number = sc.nextInt();
+//        int basNumber = 0;
+//        int tempNumber = number;
+//        int basValue;
+//        int result = 0;
+//        int basPow;
+//
+//        while (tempNumber != 0) {
+//            tempNumber /= 10;
+//            basNumber++;
+//        }
+//        tempNumber = number;
+//
+//        while (tempNumber != 0) {
+//            basValue = tempNumber % 10;
+//            basPow = 1;
+//            for (int i = 1; i <= basNumber; i++) {
+//                basPow *= basValue;
+//            }
+//
+//            result += basPow;
+//
+//            tempNumber /= 10;
+//        }
+//        if (result == number) {
+//            System.out.println(number + " sayısı bir Armstrong sayısıdır.");
+//        }
+//        else {
+//            System.out.println(number + " sayısı bir Armstrong sayısı değildir.");
+//        }
+
+
+//        int a = 2451, basamakSayisi = 0, numberCounter = 0;
+//
+//        //Basamak Sayısı Bulma İşlemi
+//        // 2451 / 10 = 245
+//        // 245 / 10 = 24
+//        // 24 / 10 = 2
+//        // 2 / 10 = 0
+//        // 0 / 10 = 0
+//
+//        while (a != 0) {
+//            a /= 10;
+//            numberCounter++;
+//        }
+//        //System.out.println(numberCounter);
+//
+//
+//        // Bir Sayının Son Basamağını Bulma
+//        //2451 % 10 = 1
+//        int b = 2451;
+//        int c = b % 10;
+//        //System.out.println(c);
+//
+//
+//        //Üslü Sayı Hesaplayan Program
+//        int sub = 2, sup = 3;
+//        int result = 1;
+//        for (int i = 1; i <= sup; i++) {
+//            result *= sub;
+//        }
+//        System.out.println(result);
+
+
 
         //Üslü Sayı Hesaplayan Program
 
         //with for loop
-        int n,k, total=1;
-
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("Üssü alınacak sayı: ");
-        n = sc.nextInt();
-        System.out.print("Üs olacak sayı: ");
-        k = sc.nextInt();
-        for (int i = 1; i <= k; i++) {
-            total *= n;
-        }
-        System.out.println("Cevap: " + total);
+//        int n,k, total=1;
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Üssü alınacak sayı: ");
+//        n = sc.nextInt();
+//        System.out.print("Üs olacak sayı: ");
+//        k = sc.nextInt();
+//        for (int i = 1; i <= k; i++) {
+//            total *= n;
+//        }
+//        System.out.println("Cevap: " + total);
 
         //with while loop
 //        int n,k, total=1, i=1;
