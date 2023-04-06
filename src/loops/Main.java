@@ -5,79 +5,166 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //ATM Projesi
+        //EBOB-EKOK Bulan Program
 
-        String userName, password;
-        int right = 3;
-        int balance = 1500;
-        int select;
         Scanner sc = new Scanner(System.in);
 
-        while (right > 0) {
-            System.out.print("Kullanıcı Adınız: ");
-            userName = sc.nextLine();
-            System.out.print("Parolanız: ");
-            password = sc.nextLine();
-            if (userName.equals("patika") && password.equals("dev123")) {
-                System.out.println("Merhaba, Kodluyoruz Bankasına Hoşgeldiniz!");
-                do {
-                    System.out.println("1- Para Yatırma\n" +
-                            "2- Para Çekme\n" +
-                            "3- Bakiye Sorgula\n" +
-                            "4- Çıkış Yap");
-                    System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
-                    select = sc.nextInt();
-                    int price;
-                    switch (select) {
-                        case 1:
-                            System.out.print("Para miktarı: ");
-                            price = sc.nextInt();
-                            balance += price;
-                            break;
-                        case 2:
-                            System.out.print("Para miktarı: ");
-                            price = sc.nextInt();
-                            if (price > balance) {
-                                System.out.println("Bakiye yetersiz.");
-                            } else {
-                                balance -= price;
-                            }
-                            break;
-                        case 3:
-                            System.out.println("Bakiyeniz : " + balance);
-                            break;
-                    }
-//                    if (select == 1) {
-//                        System.out.print("Para miktarı: ");
-//                        int price = sc.nextInt();
-//                        balance += price;
-//                    }
-//                    else if (select == 2) {
-//                        System.out.print("Para miktarı: ");
-//                        int price = sc.nextInt();
-//                        if (price > balance) {
-//                            System.out.println("Bakiye yetersiz.");
-//                        }
-//                        else {
-//                            balance -= price;
-//                        }
-//                    }
-//                    else if (select == 3) {
-//                        System.out.println("Bakiyeniz : " + balance);
-//                    }
-                } while (select != 4);
-                System.out.println("Tekrar görüşmek üzere!");
+        System.out.print("n1 sayısını giriniz: ");
+        int n1 = sc.nextInt();
+
+        System.out.print("n2 sayısını giriniz: ");
+        int n2 = sc.nextInt();
+
+        //EBOB and EKOK with while loop
+
+        //EKOK
+
+        int i = 1;
+
+        while (i <= (n1 * n2)) {
+            if ((i % n1 == 0) && (i % n2 == 0)) {
+                System.out.println(i);
                 break;
-            } else {
-                right--;
-                System.out.println("Hatalı kullanıcı adı veya şifre. Tekrar deneyiniz.");
-                if (right == 0) {
-                    System.out.println("Hesabınız bloke olmuştur lüfen banka ile iletişime geçiniz.");
-                } else {
-                    System.out.println("Kalan Hakkınız: " + right);
-                }
             }
+            i++;
         }
+
+
+        //EBOB
+
+//        int i = 1;
+//        int ebob = 1;
+
+//        while (i <= n1) {
+//            if ((n1 % i == 0) && (n2 % i == 0)) {
+//                System.out.println(i);
+//                ebob = i;
+//            }
+//            i++;
+//        }
+//        System.out.println(ebob);
+
+//        int i = n1;
+//        int ebob = 1;
+//        while (n1 >= 1) {
+//            if ((n1 % i == 0) && (n2 % i == 0)) {
+//                ebob = i;
+//                break;
+//            }
+//            i--;
+//        }
+//        System.out.println(ebob);
+
+
+
+
+        //EBOB and EKOK with for loop
+
+        //EKOK
+
+//        for (int i = 1; i <= (n1 * n2); i++) {
+//            if ((i % n1 == 0) && (i % n2 == 0)) {
+//                System.out.println(i);
+//                break;
+//            }
+//        }
+
+
+        //EBOB
+
+//        int ebob = 1;
+//        for (int i = 1; i <= n1; i++) {
+//            if ((n1 % i == 0) && (n2 % i == 0)) {
+//                System.out.println(i);
+//                ebob = i;
+//            }
+//        }
+//        System.out.println(ebob);
+//
+//        System.out.println("---------------------------");
+//
+//        for (int k = n1;  k >= 1; k--) {
+//            if ((n1 % k == 0) && (n2 % k == 0)) {
+//                ebob = k;
+//                System.out.println(ebob);
+//                break;
+//            }
+//        }
+
+
+        //ATM Projesi
+
+//        String userName, password;
+//        int right = 3;
+//        int balance = 1500;
+//        int select;
+//        Scanner sc = new Scanner(System.in);
+//
+//        while (right > 0) {
+//            System.out.print("Kullanıcı Adınız: ");
+//            userName = sc.nextLine();
+//            System.out.print("Parolanız: ");
+//            password = sc.nextLine();
+//            if (userName.equals("patika") && password.equals("dev123")) {
+//                System.out.println("Merhaba, Kodluyoruz Bankasına Hoşgeldiniz!");
+//                do {
+//                    System.out.println("1- Para Yatırma\n" +
+//                            "2- Para Çekme\n" +
+//                            "3- Bakiye Sorgula\n" +
+//                            "4- Çıkış Yap");
+//                    System.out.print("Lütfen yapmak istediğiniz işlemi seçiniz: ");
+//                    select = sc.nextInt();
+//                    int price;
+//                    switch (select) {
+//                        case 1:
+//                            System.out.print("Para miktarı: ");
+//                            price = sc.nextInt();
+//                            balance += price;
+//                            break;
+//                        case 2:
+//                            System.out.print("Para miktarı: ");
+//                            price = sc.nextInt();
+//                            if (price > balance) {
+//                                System.out.println("Bakiye yetersiz.");
+//                            } else {
+//                                balance -= price;
+//                            }
+//                            break;
+//                        case 3:
+//                            System.out.println("Bakiyeniz : " + balance);
+//                            break;
+//                    }
+////                    if (select == 1) {
+////                        System.out.print("Para miktarı: ");
+////                        int price = sc.nextInt();
+////                        balance += price;
+////                    }
+////                    else if (select == 2) {
+////                        System.out.print("Para miktarı: ");
+////                        int price = sc.nextInt();
+////                        if (price > balance) {
+////                            System.out.println("Bakiye yetersiz.");
+////                        }
+////                        else {
+////                            balance -= price;
+////                        }
+////                    }
+////                    else if (select == 3) {
+////                        System.out.println("Bakiyeniz : " + balance);
+////                    }
+//                } while (select != 4);
+//                System.out.println("Tekrar görüşmek üzere!");
+//                break;
+//            } else {
+//                right--;
+//                System.out.println("Hatalı kullanıcı adı veya şifre. Tekrar deneyiniz.");
+//                if (right == 0) {
+//                    System.out.println("Hesabınız bloke olmuştur lüfen banka ile iletişime geçiniz.");
+//                } else {
+//                    System.out.println("Kalan Hakkınız: " + right);
+//                }
+//            }
+//        }
 
 
         //Yıldızlar ile Üçgen Yapımı
