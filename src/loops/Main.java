@@ -5,18 +5,36 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        //Fibonacci Serisi
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Kaç elemanlı fibonacci serisi istiyorsunuz? ");
+        int n1= 0, n2 = 1;
+        int n = sc.nextInt();
+
+        System.out.print(n + " Elemanlı Fibonacci Serisi: ");
+        for (int i = 0; i<= n; i++) {
+            System.out.print(n1 + " ");
+            int total = n1 + n2;
+            n1 = n2;
+            n2 = total;
+        }
+
+
+
+
         //1-100 Arasındaki Asal Sayıları Bulan Program
 
-        int sayi;
-        for(int i=2; i<=100; i++){
-            sayi=0;
-            for(int j=2; j<=i/2; j++){
-                if(i%j==0)
-                    sayi++;
-            }
-            if(sayi==0)
-                System.out.print(+i + " ");
-        }
+//        int sayi;
+//        for(int i=2; i<=100; i++){
+//            sayi=0;
+//            for(int j=2; j<=i/2; j++){
+//                if(i%j==0)
+//                    sayi++;
+//            }
+//            if(sayi==0)
+//                System.out.print(+i + " ");
+//        }
 
 
         //Ters Üçgen Yapımı
