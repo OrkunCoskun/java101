@@ -5,28 +5,43 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Mükemmel Sayı Bulan Program
-
+        //Ters Üçgen Yapımı
         Scanner sc = new Scanner(System.in);
         System.out.print("Bir Sayı Giriniz: ");
-        int number = sc.nextInt();
-        int total = 0;
+        int n = sc.nextInt();
 
-        for (int i = 1; i < number; i++) {
-            if (number % i == 0) {
-                System.out.println(i);
-                total += i;
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = 1; j <= (n - i); j++) {
+                System.out.print(" ");
             }
+            for (int k = 1; k <= (2 * i) - 1; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
-        System.out.println("-------------");
-        if (total == number) {
-            System.out.println(number + " Mükemmel sayıdır.");
-        }
-        else
-        {
-            System.out.println(number + " Mükemmel sayı değildir.");
-        }
-        System.out.println(total);
+
+        //Mükemmel Sayı Bulan Program
+
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Bir Sayı Giriniz: ");
+//        int number = sc.nextInt();
+//        int total = 0;
+//
+//        for (int i = 1; i < number; i++) {
+//            if (number % i == 0) {
+//                System.out.println(i);
+//                total += i;
+//            }
+//        }
+//        System.out.println("-------------");
+//        if (total == number) {
+//            System.out.println(number + " Mükemmel sayıdır.");
+//        }
+//        else
+//        {
+//            System.out.println(number + " Mükemmel sayı değildir.");
+//        }
+//        System.out.println(total);
 
 
 
