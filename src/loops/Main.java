@@ -5,27 +5,52 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //Girilen Sayılardan Min ve Max Değerleri Bulma
+        //Mükemmel Sayı Bulan Program
 
-        int min = 0, max = 0;
         Scanner sc = new Scanner(System.in);
+        System.out.print("Bir Sayı Giriniz: ");
+        int number = sc.nextInt();
+        int total = 0;
 
-        System.out.print("Kaç tane sayı gireceksiniz: ");
-        int n1 = sc.nextInt();
-
-        for (int i = 1; i <= n1; i++) {
-            System.out.print(i + ". Sayıyı giriniz: ");
-            int n2 = sc.nextInt();
-
-            if (n2 > max) {
-                max = n2;
-            }
-            if (n2 < min || min == 0) {
-                min = n2;
+        for (int i = 1; i < number; i++) {
+            if (number % i == 0) {
+                System.out.println(i);
+                total += i;
             }
         }
-        System.out.println("En büyük sayı: " + max);
-        System.out.println("En küçük sayı: " + min);
+        System.out.println("-------------");
+        if (total == number) {
+            System.out.println(number + " Mükemmel sayıdır.");
+        }
+        else
+        {
+            System.out.println(number + " Mükemmel sayı değildir.");
+        }
+        System.out.println(total);
+
+
+
+        //Girilen Sayılardan Min ve Max Değerleri Bulma
+
+//        int min = 0, max = 0;
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Kaç tane sayı gireceksiniz: ");
+//        int n1 = sc.nextInt();
+//
+//        for (int i = 1; i <= n1; i++) {
+//            System.out.print(i + ". Sayıyı giriniz: ");
+//            int n2 = sc.nextInt();
+//
+//            if (n2 > max) {
+//                max = n2;
+//            }
+//            if (n2 < min || min == 0) {
+//                min = n2;
+//            }
+//        }
+//        System.out.println("En büyük sayı: " + max);
+//        System.out.println("En küçük sayı: " + min);
 
 
 
