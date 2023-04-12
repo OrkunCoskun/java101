@@ -7,18 +7,18 @@ public class Main {
 
         //Fibonacci Serisi
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Kaç elemanlı fibonacci serisi istiyorsunuz? ");
-        int n1= 0, n2 = 1;
-        int n = sc.nextInt();
-
-        System.out.print(n + " Elemanlı Fibonacci Serisi: ");
-        for (int i = 0; i<= n; i++) {
-            System.out.print(n1 + " ");
-            int total = n1 + n2;
-            n1 = n2;
-            n2 = total;
-        }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Kaç elemanlı fibonacci serisi istiyorsunuz? ");
+//        int n1= 0, n2 = 1;
+//        int n = sc.nextInt();
+//
+//        System.out.print(n + " Elemanlı Fibonacci Serisi: ");
+//        for (int i = 0; i<= n; i++) {
+//            System.out.print(n1 + " ");
+//            int total = n1 + n2;
+//            n1 = n2;
+//            n2 = total;
+//        }
 
 
 
