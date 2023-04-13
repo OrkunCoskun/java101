@@ -82,19 +82,44 @@ public class Main {
             return base * powerRecursive(base, exponent-1);
     }
 
+    static boolean isPrime(int sayi, int bolen) {
+        if (sayi < 2)
+            return  false;
+        if (sayi == 2)
+            return true;
+        if (sayi % bolen == 0)
+            return false;
+        if (bolen * bolen > sayi)
+            return true;
+        return isPrime(sayi, bolen + 1);
+    }
+
     public static void main(String[] args) {
+
+        //Recursive Asal Sayı Bulan Program
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Bir sayı giriniz :");
+        int sayi = sc.nextInt();
+
+        if (isPrime(sayi,2)){
+            System.out.println(sayi + " asal bir sayıdır.");
+        } else {
+            System.out.println(sayi + " asal bir sayı değildir.");
+        }
+
 
         //Recursive Üs Hesabı Yapan Program
 
-        Scanner sc = new Scanner(System.in);
-
-        System.out.print("İlk Sayı: ");
-        int a = sc.nextInt();
-
-        System.out.print("İkinci Sayı: ");
-        int b = sc.nextInt();
-
-        System.out.println(powerRecursive(a,b));
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("İlk Sayı: ");
+//        int a = sc.nextInt();
+//
+//        System.out.print("İkinci Sayı: ");
+//        int b = sc.nextInt();
+//
+//        System.out.println(powerRecursive(a,b));
 
 
 
