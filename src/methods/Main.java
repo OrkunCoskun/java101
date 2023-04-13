@@ -75,63 +75,86 @@ public class Main {
         System.out.println("Alanı: " + (a * b));
     }
 
+    static int powerRecursive(int base, int exponent) {
+        if (exponent == 0)
+            return 1;
+        else
+            return base * powerRecursive(base, exponent-1);
+    }
+
     public static void main(String[] args) {
+
+        //Recursive Üs Hesabı Yapan Program
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("İlk Sayı: ");
+        int a = sc.nextInt();
+
+        System.out.print("İkinci Sayı: ");
+        int b = sc.nextInt();
+
+        System.out.println(powerRecursive(a,b));
+
+
 
 //        System.out.println(isPalindrome(101));
 //        System.out.println(fib(9));
 
-        Scanner sc = new Scanner(System.in);
-        int select;
+        //Gelişmiş Hesap Makinesi
 
-        String menu = "1- Toplama İşlemi\n"
-                + "2- Çıkarma İşlemi\n"
-                + "3- Çarpma İşlemi\n"
-                + "4- Bölme İşlemi\n"
-                + "5- Üslü Sayı Hesaplama\n"
-                + "6- Mod Alma\n"
-                + "7- Dikdörtgen Alan ve Çevre Hesabı\n"
-                + "0- Çıkış Yap\n";
-
-        System.out.println(menu);
-        while (true) {
-            System.out.print("Bir İşlem Seçiniz: ");
-            select = sc.nextInt();
-
-            if (select == 0)
-                break;
-
-            System.out.print("İlk Sayı: ");
-            int a = sc.nextInt();
-            System.out.print("İkinci Sayı: ");
-            int b = sc.nextInt();
-
-            switch (select) {
-                case 1:
-                    sum(a, b);
-                    break;
-                case 2:
-                    minus(a, b);
-                    break;
-                case 3:
-                    times(a, b);
-                    break;
-                case 4:
-                    divided(a, b);
-                    break;
-                case 5:
-                    System.out.println("Üs Hesabı: " + power(a, b));
-                    break;
-                case 6:
-                    System.out.println("Mod İşlemi: " + mod(a, b));
-                    break;
-                case 7:
-                    calc(a, b);
-                    break;
-                default:
-                    System.out.println("Geçersiz bir işlem girdiniz!");
-            }
-        }
-        System.out.println("Güle Güle");
+//        Scanner sc = new Scanner(System.in);
+//        int select;
+//
+//        String menu = "1- Toplama İşlemi\n"
+//                + "2- Çıkarma İşlemi\n"
+//                + "3- Çarpma İşlemi\n"
+//                + "4- Bölme İşlemi\n"
+//                + "5- Üslü Sayı Hesaplama\n"
+//                + "6- Mod Alma\n"
+//                + "7- Dikdörtgen Alan ve Çevre Hesabı\n"
+//                + "0- Çıkış Yap\n";
+//
+//        System.out.println(menu);
+//        while (true) {
+//            System.out.print("Bir İşlem Seçiniz: ");
+//            select = sc.nextInt();
+//
+//            if (select == 0)
+//                break;
+//
+//            System.out.print("İlk Sayı: ");
+//            int a = sc.nextInt();
+//            System.out.print("İkinci Sayı: ");
+//            int b = sc.nextInt();
+//
+//            switch (select) {
+//                case 1:
+//                    sum(a, b);
+//                    break;
+//                case 2:
+//                    minus(a, b);
+//                    break;
+//                case 3:
+//                    times(a, b);
+//                    break;
+//                case 4:
+//                    divided(a, b);
+//                    break;
+//                case 5:
+//                    System.out.println("Üs Hesabı: " + power(a, b));
+//                    break;
+//                case 6:
+//                    System.out.println("Mod İşlemi: " + mod(a, b));
+//                    break;
+//                case 7:
+//                    calc(a, b);
+//                    break;
+//                default:
+//                    System.out.println("Geçersiz bir işlem girdiniz!");
+//            }
+//        }
+//        System.out.println("Güle Güle");
 
     }
 }
