@@ -94,19 +94,41 @@ public class Main {
         return isPrime(sayi, bolen + 1);
     }
 
+    //Desene Göre Metot Oluşturma
+    static int dgmo(int x, int tempX, boolean stop) {
+        System.out.print(x + " ");
+        if (x < 0 || x == 0 || !stop) {
+            stop = false;
+            if (x != tempX) {
+                return dgmo(x + 5, tempX, stop);
+            } else
+                return 0;
+        } else {
+            return dgmo(x - 5, tempX, stop);
+        }
+    }
+
     public static void main(String[] args) {
+
+        //Desene Göre Metot Oluşturma
+        Scanner sc = new Scanner(System.in);
+        int x, tempX;
+        System.out.print("Bir Sayı Giriniz: ");
+        x = sc.nextInt();
+        dgmo(x, tempX = x, true);
+
 
         //Recursive Asal Sayı Bulan Program
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Bir sayı giriniz :");
-        int sayi = sc.nextInt();
-
-        if (isPrime(sayi,2)){
-            System.out.println(sayi + " asal bir sayıdır.");
-        } else {
-            System.out.println(sayi + " asal bir sayı değildir.");
-        }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Bir sayı giriniz :");
+//        int sayi = sc.nextInt();
+//
+//        if (isPrime(sayi,2)){
+//            System.out.println(sayi + " asal bir sayıdır.");
+//        } else {
+//            System.out.println(sayi + " asal bir sayı değildir.");
+//        }
 
 
         //Recursive Üs Hesabı Yapan Program
