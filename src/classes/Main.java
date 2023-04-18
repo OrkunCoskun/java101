@@ -3,14 +3,24 @@ package classes;
 public class Main {
     public static void main(String[] args) {
 
+        //Maaş Hesaplayıcı
+
+        Employee e1 = new Employee("Orkun", 2000, 45, 1985);
+
+        System.out.println(e1);
+
+
+
+
+
         //Boks Oyunu
 
-        Fighter f1 = new Fighter("A", 10, 120, 100, 40);
-        Fighter f2 = new Fighter("B", 20, 85, 85, 40);
-
-        Match match = new Match(f1,f2,85,100);
-
-        match.run();
+//        Fighter f1 = new Fighter("A", 10, 120, 100, 40);
+//        Fighter f2 = new Fighter("B", 20, 85, 85, 40);
+//
+//        Match match = new Match(f1,f2,85,100);
+//
+//        match.run();
 
 
 
