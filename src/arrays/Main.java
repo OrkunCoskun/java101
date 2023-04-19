@@ -15,6 +15,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Dizideki Elemanların Kaç Kez Tekrar Edildiğini Yani Frekanslarını Bulan Program
+
         int[] list = {10, 20, 20, 10, 10, 20, 5, 20};
 
         System.out.println("Dizi: " + Arrays.toString(list));
