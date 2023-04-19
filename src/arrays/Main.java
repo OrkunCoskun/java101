@@ -15,6 +15,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        //Dizideki Elemanları Küçükten Büyüğe Sıralayan Program
+
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Dizinin boyutu n:");
