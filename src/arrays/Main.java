@@ -15,30 +15,50 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Dizideki Tekrar Eden Çift Sayıları Bulan Program
+        Scanner sc = new Scanner(System.in);
 
-        int[] list = {2, 2, 4, 4, 5, 6, 7, 7, 8, 2, 3, 4, 9, 3};
+        System.out.print("Dizinin boyutu n:");
+        int size = sc.nextInt();
 
-        int[] evenDuplicates = new int[list.length];
-
-        int startIndex = 0;
+        System.out.println("Dizinin elemanlarını giriniz: ");
+        int[] list = new int[size];
 
         for (int i = 0; i < list.length; i++) {
-            for (int j = 0; j < list.length; j++) {
-                if ((i != j) && ((list[i] % 2 == 0) && (list[i] == list[j]))) {
-                    if (!isFind(evenDuplicates, list[i])) {
-                        evenDuplicates[startIndex++] = list[i];
-                    }
-                    break;
-                }
-            }
+            System.out.print((i+1) + ". Elemanı: ");
+            list[i] = sc.nextInt();
         }
+        Arrays.sort(list);
+        System.out.println("Sıralama: " + Arrays.toString(list));
 
-        for (int value : evenDuplicates) {
-            if (value != 0) {
-                System.out.println(value);
-            }
-        }
+
+
+
+
+
+        //Dizideki Tekrar Eden Çift Sayıları Bulan Program
+
+//        int[] list = {2, 2, 4, 4, 5, 6, 7, 7, 8, 2, 3, 4, 9, 3};
+//
+//        int[] evenDuplicates = new int[list.length];
+//
+//        int startIndex = 0;
+//
+//        for (int i = 0; i < list.length; i++) {
+//            for (int j = 0; j < list.length; j++) {
+//                if ((i != j) && ((list[i] % 2 == 0) && (list[i] == list[j]))) {
+//                    if (!isFind(evenDuplicates, list[i])) {
+//                        evenDuplicates[startIndex++] = list[i];
+//                    }
+//                    break;
+//                }
+//            }
+//        }
+//
+//        for (int value : evenDuplicates) {
+//            if (value != 0) {
+//                System.out.println(value);
+//            }
+//        }
 
         //Dizideki Tekrar Eden Sayıları Bulan Program
 
